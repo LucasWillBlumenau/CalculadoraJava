@@ -9,7 +9,6 @@ public class Main extends Application {
     public void start(Stage stage) throws IOException {
         FXMLLoader fxmlLoader = new FXMLLoader(Main.class.getResource("/view/TelaCalculadora.fxml"));
         Scene scene = new Scene(fxmlLoader.load());
-        //scene.getStylesheets().add(getClass().getResource("/view/styles.css").toExternalForm());
         stage.setTitle("Operação do Segundo Grau");
         stage.setScene(scene);
         stage.show();
