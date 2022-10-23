@@ -10,25 +10,21 @@ public class TelaCalculadoraController {
     @FXML private TextField tfCalculos;
     @FXML private Button buttonZero, buttonOne, buttonTwo, buttonThree, buttonFour, buttonFive,
     buttonSix, buttonSeven, buttonEight, buttonNine;
-    private double valueOne, valueTwo;
+    private double valueOne;
     private char operation;
 
     public void setNumero(ActionEvent e){
-        String button = String.valueOf(e.getSource());
-        String text = tfCalculos.getText();
-        switch (button) {
-            case "Button[id=buttonZero, styleClass=button]'0'" -> text += buttonZero.getText();
-            case "Button[id=buttonOne, styleClass=button]'1'" -> text += buttonOne.getText();
-            case "Button[id=buttonTwo, styleClass=button]'2'" -> text += buttonTwo.getText();
-            case "Button[id=buttonThree, styleClass=button]'3'" -> text += buttonThree.getText();
-            case "Button[id=buttonFour, styleClass=button]'4'" -> text += buttonFour.getText();
-            case "Button[id=buttonFive, styleClass=button]'5'" -> text += buttonFive.getText();
-            case "Button[id=buttonSix, styleClass=button]'6'" -> text += buttonSix.getText();
-            case "Button[id=buttonSeven, styleClass=button]'7'" -> text += buttonSeven.getText();
-            case "Button[id=buttonEight, styleClass=button]'8'" -> text += buttonEight.getText();
-            case "Button[id=buttonNine, styleClass=button]'9'" -> text += buttonNine.getText();
-        }
-        tfCalculos.setText(text);
+        String number = tfCalculos.getText();
+        if(e.getSource() == buttonZero) { tfCalculos.setText(number + "0"); }
+        else if(e.getSource() == buttonOne) { tfCalculos.setText(number + "1"); }
+        else if(e.getSource() == buttonTwo) { tfCalculos.setText(number + "2"); }
+        else if(e.getSource() == buttonThree) { tfCalculos.setText(number + "3"); }
+        else if(e.getSource() == buttonFour) { tfCalculos.setText(number + "4"); }
+        else if(e.getSource() == buttonFive) { tfCalculos.setText(number + "5"); }
+        else if(e.getSource() == buttonSix) { tfCalculos.setText(number + "6"); }
+        else if(e.getSource() == buttonSeven) { tfCalculos.setText(number + "7"); }
+        else if(e.getSource() == buttonEight) { tfCalculos.setText(number + "8"); }
+        else if(e.getSource() == buttonNine) { tfCalculos.setText(number + "9"); }
     }
 
     public void somar(ActionEvent e){
@@ -56,21 +52,21 @@ public class TelaCalculadoraController {
     }
     
     public void calcular(ActionEvent e){
-        valueTwo = Double.parseDouble(tfCalculos.getText());
-        String resultado;
+        double valueTwo = Double.parseDouble(tfCalculos.getText());
         switch (operation){
-            case '+' -> resultado = String.valueOf(valueOne + valueTwo);
-            case '-' -> resultado = String.valueOf(valueOne - valueTwo);
-            case '/' -> resultado = String.valueOf(valueOne / valueTwo);
-            case '*' -> resultado = String.valueOf(valueOne * valueTwo);
-            default -> resultado = null;
+            case '+' -> tfCalculos.setText(String.valueOf(valueOne + valueTwo));
+            case '-' -> tfCalculos.setText(String.valueOf(valueOne - valueTwo));
+            case '/' -> tfCalculos.setText(String.valueOf(valueOne / valueTwo));
+            case '*' -> tfCalculos.setText(String.valueOf(valueOne * valueTwo));
+            default -> tfCalculos.setText("");
         }
-        tfCalculos.setText(resultado);
         valueOne = 0;
-        valueTwo = 0;
     }
 
     public void limpar(ActionEvent e){
         tfCalculos.setText("");
+        operation = '@';
+        valueOne = 0;
     }
+
 }
