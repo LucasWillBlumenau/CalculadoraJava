@@ -4,23 +4,25 @@
 <?import javafx.scene.control.TextField?>
 <?import javafx.scene.layout.AnchorPane?>
 
-<AnchorPane prefHeight="400.0" prefWidth="300.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TelaCalculadoraController">
+<AnchorPane prefHeight="400.0" prefWidth="338.0" xmlns="http://javafx.com/javafx/18" xmlns:fx="http://javafx.com/fxml/1" fx:controller="control.TelaCalculadoraController">
    <children>
-      <Button fx:id="buttonOne" layoutX="38.0" layoutY="94.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="1" />
-      <Button fx:id="buttonTwo" layoutX="118.0" layoutY="94.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="2" />
-      <Button fx:id="buttonThree" layoutX="198.0" layoutY="94.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="3" />
-      <Button fx:id="buttonFour" layoutX="38.0" layoutY="154.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="4" />
-      <Button fx:id="buttonFive" layoutX="118.0" layoutY="154.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="5" />
-      <Button fx:id="buttonSix" layoutX="198.0" layoutY="154.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="6" />
-      <Button fx:id="buttonSeven" layoutX="38.0" layoutY="214.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="7" />
-      <Button fx:id="buttonEight" layoutX="118.0" layoutY="214.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="8" />
-      <Button fx:id="buttonNine" layoutX="198.0" layoutY="214.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="9" />
-      <Button layoutX="38.0" layoutY="274.0" mnemonicParsing="false" onAction="#somar" prefHeight="33.0" prefWidth="65.0" text="+" />
-      <Button fx:id="buttonZero" layoutX="118.0" layoutY="274.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="0" />
-      <Button layoutX="198.0" layoutY="274.0" mnemonicParsing="false" onAction="#subtrair" prefHeight="33.0" prefWidth="65.0" text="-" />
-      <Button layoutX="38.0" layoutY="334.0" mnemonicParsing="false" onAction="#dividir" prefHeight="33.0" prefWidth="65.0" text="/" />
-      <Button layoutX="118.0" layoutY="334.0" mnemonicParsing="false" onAction="#calcular" prefHeight="33.0" prefWidth="65.0" text="=" />
-      <Button layoutX="198.0" layoutY="334.0" mnemonicParsing="false" onAction="#multiplicar" prefHeight="33.0" prefWidth="65.0" text="X" />
-      <TextField fx:id="tfCalculos" alignment="CENTER_RIGHT" layoutX="37.0" layoutY="44.0" prefHeight="33.0" prefWidth="225.0" />
+      <Button fx:id="buttonOne" layoutX="14.0" layoutY="94.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="1" />
+      <Button fx:id="buttonTwo" layoutX="94.0" layoutY="94.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="2" />
+      <Button fx:id="buttonThree" layoutX="174.0" layoutY="94.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="3" />
+      <Button fx:id="buttonFour" layoutX="14.0" layoutY="154.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="4" />
+      <Button fx:id="buttonFive" layoutX="94.0" layoutY="154.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="5" />
+      <Button fx:id="buttonSix" layoutX="174.0" layoutY="154.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="6" />
+      <Button fx:id="buttonSeven" layoutX="14.0" layoutY="214.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="7" />
+      <Button fx:id="buttonEight" layoutX="94.0" layoutY="214.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="8" />
+      <Button fx:id="buttonNine" layoutX="174.0" layoutY="214.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="9" />
+      <Button layoutX="254.0" layoutY="94.0" mnemonicParsing="false" onAction="#somar" prefHeight="33.0" prefWidth="65.0" text="+" />
+      <Button fx:id="buttonZero" layoutX="94.0" layoutY="274.0" mnemonicParsing="false" onAction="#setNumero" prefHeight="33.0" prefWidth="65.0" text="0" />
+      <Button layoutX="254.0" layoutY="154.0" mnemonicParsing="false" onAction="#subtrair" prefHeight="33.0" prefWidth="65.0" text="-" />
+      <Button layoutX="254.0" layoutY="274.0" mnemonicParsing="false" onAction="#dividir" prefHeight="33.0" prefWidth="65.0" text="/" />
+      <Button layoutX="174.0" layoutY="274.0" mnemonicParsing="false" onAction="#calcular" prefHeight="33.0" prefWidth="65.0" text="=" />
+      <Button layoutX="254.0" layoutY="214.0" mnemonicParsing="false" onAction="#multiplicar" prefHeight="33.0" prefWidth="65.0" text="X" />
+      <TextField fx:id="tfCalculos" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="44.0" prefHeight="33.0" prefWidth="302.0" />
+      <Button layoutX="14.0" layoutY="274.0" mnemonicParsing="false" onAction="#limpar" prefHeight="33.0" prefWidth="65.0" text="C" />
+      <Button layoutX="17.0" layoutY="328.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="302.0" text="Equação Quadrática" />
    </children>
 </AnchorPane>

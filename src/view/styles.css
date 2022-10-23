@@ -1,0 +1,11 @@
+.root{
+    -fx-background-color: #333333;
+}
+.button{
+    -fx-background-color: #555588;
+    -fx-text-fill: #ffffff;
+    -fx-font-family: "Verdana";
+}
+.button:hover{
+    -fx-background-color: #444488;
+}
