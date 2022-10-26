@@ -23,6 +23,6 @@
       <Button layoutX="254.0" layoutY="208.0" mnemonicParsing="false" onAction="#multiplicar" prefHeight="33.0" prefWidth="65.0" text="X" />
       <TextField fx:id="tfCalculos" alignment="CENTER_RIGHT" layoutX="14.0" layoutY="38.0" prefHeight="33.0" prefWidth="302.0" />
       <Button layoutX="14.0" layoutY="268.0" mnemonicParsing="false" onAction="#limpar" prefHeight="33.0" prefWidth="65.0" text="C" />
-      <Button layoutX="17.0" layoutY="322.0" mnemonicParsing="false" prefHeight="33.0" prefWidth="302.0" text="Equação Quadrática" />
+      <Button layoutX="17.0" layoutY="322.0" mnemonicParsing="false" onAction="#switchBhaskara" prefHeight="33.0" prefWidth="302.0" text="Equação Quadrática" />
    </children>
 </AnchorPane>

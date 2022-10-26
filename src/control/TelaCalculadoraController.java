@@ -2,8 +2,15 @@ package control;
 
 import javafx.event.ActionEvent;
 import javafx.fxml.FXML;
+import javafx.fxml.FXMLLoader;
+import javafx.scene.Node;
+import javafx.scene.Parent;
+import javafx.scene.Scene;
 import javafx.scene.control.Button;
 import javafx.scene.control.TextField;
+import javafx.stage.Stage;
+
+import java.io.IOException;
 
 public class TelaCalculadoraController {
 
@@ -12,7 +19,7 @@ public class TelaCalculadoraController {
     buttonSix, buttonSeven, buttonEight, buttonNine;
     private double valueOne;
     private char operation;
-
+    private Stage stage;
     public void setNumero(ActionEvent e){
         String number = tfCalculos.getText();
         if(e.getSource() == buttonZero) { tfCalculos.setText(number + "0"); }
@@ -67,6 +74,18 @@ public class TelaCalculadoraController {
         tfCalculos.setText("");
         operation = '@';
         valueOne = 0;
+    }
+
+    public void switchBhaskara(ActionEvent e) throws IOException {
+        FXMLLoader fxmlLoader = new FXMLLoader(getClass().getResource("/view/telaBhaskara.fxml"));
+        Parent root = fxmlLoader.load();
+        stage = (Stage) ((Node)e.getSource()).getScene().getWindow();
+        Scene scene = new Scene(root);
+        scene.getStylesheets().add(getClass().getResource("/view/styles.css").toExternalForm());
+        stage.setResizable(false);
+        stage.setTitle("Calculadora");
+        stage.setScene(scene);
+        stage.show();
     }
 
 }
